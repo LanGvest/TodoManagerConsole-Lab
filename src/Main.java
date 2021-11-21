@@ -19,6 +19,8 @@ public class Main {
         System.out.println(Color.GREEN + "Successfully authorized!" + Color.RESET);
 
         todoManager = new TodoManager().init();
+        Id.getInstance().setBaseId(todoManager.getLastId());
+
         showMenu();
     }
 

@@ -16,6 +16,12 @@ public class TodoManager {
         return this;
     }
 
+    public int getLastId() {
+        int lastId = 0;
+        for(TodoRecord record : todoRecords) if(record.getId() > lastId) lastId = record.getId();
+        return lastId;
+    }
+
     public void displayAllRecords() {
         System.out.println("All TODO records:");
         boolean hasRecords = false;
